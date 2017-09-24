@@ -9,7 +9,6 @@ import org.openqa.selenium.support.PageFactory;
  * Created by alexey on 9/7/17.
  */
 public class SearchPage extends WebPage {
-    private WebDriver driver = null;
 
     @FindBy(name = "keyword")
     private WebElement keyWordField;
@@ -17,36 +16,25 @@ public class SearchPage extends WebPage {
     @FindBy(name = "searchProducts")
     private WebElement searchProductsBtn;
 
-    @FindBy(xpath = "//*[@id=\"Catalog\"]/table/tbody/tr[2]/td[2]/b/a/font")
-    public WebElement ProductIdElem;
+    @FindBy(xpath = "//*[@id='Catalog']/table/tbody/tr[2]/td[2]/b/a/font")
+    private WebElement productIdElem;
 
-    public String ProuductIdStr = "FL-DLH-02";
 
     public SearchPage(WebDriver driver) {
         super(driver);
-        this.driver = driver;
+    }
+    public String getProuductIdStr (){
+        return productIdElem.getText();
+    }
+
+    public void searchForProductName(String persian) {
+        keyWordField.sendKeys(persian);
+        searchProductsBtn.click();
     }
 
     @Override
     public String getPageUrl() {
         return null;
     }
-
-
-    public SearchPage searchForProductName(String persian) {
-        typeSearchQuery(persian);
-        return submitSearchAction();
-    }
-
-    private SearchPage submitSearchAction() {
-        searchProductsBtn.click();
-        return new SearchPage(driver);
-    }
-
-    private SearchPage typeSearchQuery(String persian) {
-        keyWordField.sendKeys(persian);
-        return this;
-    }
-
 
 }

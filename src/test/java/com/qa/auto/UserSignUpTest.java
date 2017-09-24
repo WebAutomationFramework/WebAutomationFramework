@@ -1,25 +1,15 @@
 package com.qa.auto;
 
-import com.qa.auto.helpers.PropertyWorker;
 import com.qa.auto.pages.CatalogPage;
 import com.qa.auto.pages.SignInPage;
 import com.qa.auto.pages.SignUpPage;
 import com.qa.auto.pages.WelcomePage;
-import com.qa.auto.wrapper_factories.BrowserFactory;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 
-public class UserSignUpTest {
-    private WebDriver driver = null;
+public class UserSignUpTest extends TestBase {
 
-    @BeforeClass
-    public void setUp(){
-        driver = BrowserFactory.initDriver();
-    }
 
     @Test
     public void verifyUserSignUpWorks() {
@@ -33,10 +23,5 @@ public class UserSignUpTest {
         SignUpPage signUpPage = signInPage.navigateSignUpPage();
         signUpPage.signUpNewUser();
         Assert.assertEquals(catalogPage.getPageUrl(),driver.getCurrentUrl());
-    }
-
-    @AfterClass
-    public void quitDriver(){
-        BrowserFactory.closeDriver();
     }
 }
