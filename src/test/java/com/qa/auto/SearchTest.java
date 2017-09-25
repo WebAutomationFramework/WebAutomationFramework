@@ -14,13 +14,7 @@ import org.testng.annotations.Test;
 /**
  * Created by alexey on 9/7/17.
  */
-public class SearchTest {
-    private WebDriver driver = null;
-
-    @BeforeMethod
-    public void setUp(){
-        driver = BrowserFactory.initDriver();
-    }
+public class SearchTest extends TestBase {
 
     @Test
     public void verifySearchAsUnauthorizedUserWorks() {
@@ -29,12 +23,12 @@ public class SearchTest {
 
         CatalogPage catalogPage =  welcomePage.enterStore();
 
-        Assert.assertTrue(catalogPage.signInBtn.isDisplayed());
+        Assert.assertTrue(catalogPage.getsignInButton().isDisplayed());
 
         SearchPage searchPage = new SearchPage(driver);
         searchPage.searchForProductName("Persian");
 
-        Assert.assertEquals(searchPage.ProductIdElem.getText(),searchPage.ProuductIdStr);
+        Assert.assertEquals(searchPage.getProuductIdStr(), ProuductIdStr);
     }
 
     @Test
@@ -46,16 +40,10 @@ public class SearchTest {
 
         SignInPage signInPage = new SignInPage(driver);
         catalogPage = signInPage.loginAs(User.userID,User.userPass);
-
-        Assert.assertTrue(catalogPage.myAccountLink.isDisplayed());
+//        Assert.assertTrue(catalogPage.myAccountLink.isDisplayed());
 
         SearchPage searchPage = new SearchPage(driver);
         searchPage.searchForProductName("Persian");
-        Assert.assertEquals(searchPage.ProductIdElem.getText(),searchPage.ProuductIdStr);
-    }
-
-    @AfterMethod
-    public void quitDriver(){
-        BrowserFactory.closeDriver();
+        Assert.assertEquals(searchPage.getProuductIdStr(), ProuductIdStr);
     }
 }
