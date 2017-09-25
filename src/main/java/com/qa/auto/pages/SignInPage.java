@@ -55,8 +55,8 @@ public class SignInPage extends WebPage{
         return new SignUpPage(driver);
     }
 
-    @Override
-    public String getPageUrl() {
-        return PAGE_URL;
-    }
+//    @Override
+//    public String getPageUrl() {
+//        return PAGE_URL;
+//    }
 }

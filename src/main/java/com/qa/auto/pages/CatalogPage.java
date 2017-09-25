@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 /**
  * Created by alexey on 9/3/17.
  */
-public class CatalogPage extends WebPage{
+public class CatalogPage extends PageWithHeaderMenu {
     private final String PAGE_URL = "http://52.210.246.113:8080/jpetstore/actions/Catalog.action";
 
     @FindBy(linkText = "Sign In")
@@ -29,8 +29,8 @@ public class CatalogPage extends WebPage{
         return myAccountLink;
     }
 
-    @Override
-    public String getPageUrl() {
-        return PAGE_URL;
-    }
+//    @Override
+//    public String getPageUrl() {
+//        return PAGE_URL;
+//    }
 }
