@@ -1,4 +1,4 @@
-package com.qa.auto.helpers;
+package com.mainacad.helpers;
 
 /**
  * Created by alexey on 9/9/17.

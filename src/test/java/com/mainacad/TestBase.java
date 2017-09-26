@@ -1,9 +1,7 @@
-package com.qa.auto;
+package com.mainacad;
 
-import com.qa.auto.pages.WelcomePage;
-import com.qa.auto.wrapper_factories.BrowserFactory;
+import com.mainacad.wrapper_factories.BrowserFactory;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -22,6 +20,6 @@ public class TestBase {
 
     @AfterMethod
     public void quitDriver(){
-     //   BrowserFactory.closeDriver();
+        BrowserFactory.closeDriver();
     }
 }

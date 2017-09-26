@@ -1,6 +1,6 @@
-package com.qa.auto.wrapper_factories;
+package com.mainacad.wrapper_factories;
 
-import com.qa.auto.helpers.PropertyWorker;
+import com.mainacad.helpers.PropertyWorker;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
