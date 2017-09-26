@@ -11,14 +11,14 @@ import org.openqa.selenium.support.PageFactory;
  * Created by alexey on 9/3/17.
  */
 public abstract class WebPage {
-    private WebDriver driver = null;
-    private static String PAGE_URL = null;
+    protected WebDriver driver;
+    private static String PAGE_URL;
 
     @FindBy(linkText = "Sign In")
-    public WebElement signInBtn;
+    protected WebElement signInBtn;
 
     @FindBy(linkText = "My Account")
-    public WebElement myAccountLink;
+    protected WebElement myAccountLink;
 
     WebPage(WebDriver driver) {
         this.driver = driver;

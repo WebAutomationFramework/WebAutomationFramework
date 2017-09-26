@@ -31,13 +31,13 @@ public class UserSignInTest {
         SignInPage signInPage = new SignInPage(driver);
         catalogPage = signInPage.loginAs(User.userID, User.userPass);
 
-        Assert.assertTrue(catalogPage.myAccountLink.isDisplayed());
+        Assert.assertTrue(catalogPage.getMyAccountLink().isDisplayed());
 
         catalogPage.selectMenuItem("My Account");
         MyAccountPage myAccountPage = new MyAccountPage(driver);
 
-        Assert.assertEquals(myAccountPage.userID.getText(), User.userID);
-        Assert.assertEquals(myAccountPage.userEmail.getAttribute("value"), User.userEmail);
+        Assert.assertEquals(myAccountPage.getUserID().getText(), User.userID);
+        Assert.assertEquals(myAccountPage.getUserEmail().getAttribute("value"), User.userEmail);
     }
 
     @AfterClass
