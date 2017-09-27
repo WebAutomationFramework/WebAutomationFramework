@@ -2,6 +2,7 @@ package com.mainacad;
 
 import com.mainacad.wrapper_factories.BrowserFactory;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -14,12 +15,13 @@ public class TestBase {
 
     @BeforeMethod
     public void setUp(){
-        driver = BrowserFactory.initDriver();
+        // driver = BrowserFactory.initDriver();
+        driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-    @AfterMethod
+    /*@AfterMethod
     public void quitDriver(){
         BrowserFactory.closeDriver();
-    }
+    }*/
 }
