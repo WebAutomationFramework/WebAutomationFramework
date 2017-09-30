@@ -10,8 +10,9 @@ import org.testng.annotations.Test;
  * Created by alexey on 9/30/17.
  */
 public class Search extends TestBase {
+
     @Test
-    public void searchWithoutWords(){
+    public void verifySearchWithoutWords(){
         CatalogPage catalogPage =
                 new WelcomePage(driver)
                         .open()
@@ -19,6 +20,7 @@ public class Search extends TestBase {
                         .typeIntoSearchField(" ")
                         .clickSearchButton();
 
-        // Assert.assertTrue(catalogPage.isPageDisplayed());
+         Assert.assertTrue(catalogPage.isPageDisplayed());
+         Assert.assertTrue(catalogPage.isEmptySearchErrorMessageDisplayed());
     }
 }
