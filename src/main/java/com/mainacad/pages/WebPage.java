@@ -16,5 +16,4 @@ public abstract class WebPage {
 
     public abstract  <T extends WebPage> T open();
     public abstract  boolean isPageDisplayed();
-
 }
