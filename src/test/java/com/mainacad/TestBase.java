@@ -12,14 +12,14 @@ public class TestBase {
     protected WebDriver driver;
     public String ProuductIdStr = "FL-DLH-02";
 
-    @BeforeMethod
-    public void setUp(){
-        driver = BrowserFactory.initDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    }
-
-    @AfterMethod
-    public void quitDriver(){
-        BrowserFactory.closeDriver();
-    }
+//    @BeforeMethod
+//    public void setUp(){
+//        driver = BrowserFactory.initDriver();
+//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//    }
+//
+//    @AfterMethod
+//    public void quitDriver(){
+//        BrowserFactory.closeDriver();
+//    }
 }
