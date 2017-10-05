@@ -11,17 +11,17 @@ import org.testng.annotations.Test;
 public class UserSignUpTest extends TestBase {
 
 
-    @Test
-    public void verifyUserSignUpWorks() {
-        WelcomePage welcomePage = new WelcomePage(driver);
-        welcomePage.open(welcomePage.getPageUrl());
-
-        CatalogPage catalogPage =  welcomePage.enterStore();
-        catalogPage.selectMenuItem("Sign In");
-
-        SignInPage signInPage = new SignInPage(driver);
-        SignUpPage signUpPage = signInPage.navigateSignUpPage();
-        signUpPage.signUpNewUser();
-        Assert.assertEquals(catalogPage.getPageUrl(),driver.getCurrentUrl());
-    }
+//    @Test
+//    public void verifyUserSignUpWorks() {
+//        WelcomePage welcomePage = new WelcomePage(driver);
+//        welcomePage.open(welcomePage.getPageUrl());
+//
+//        CatalogPage catalogPage =  welcomePage.enterStore();
+//        catalogPage.selectMenuItem("Sign In");
+//
+//        SignInPage signInPage = new SignInPage(driver);
+//        SignUpPage signUpPage = signInPage.navigateSignUpPage();
+//        signUpPage.signUpNewUser();
+//        Assert.assertEquals(catalogPage.getPageUrl(),driver.getCurrentUrl());
+//    }
 }

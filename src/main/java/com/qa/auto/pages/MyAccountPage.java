@@ -28,8 +28,8 @@ public class MyAccountPage extends WebPage{
         return userEmail;
     }
 
-    @Override
-    public String getPageUrl() {
-        return PAGE_URL;
-    }
+//    @Override
+//    public String getPageUrl() {
+//        return PAGE_URL;
+//    }
 }

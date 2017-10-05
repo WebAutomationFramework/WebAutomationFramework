@@ -20,25 +20,25 @@ public class UserSignInTest {
         driver =  BrowserFactory.initDriver();
     }
 
-    @Test
-    public void verifyUserSignInWorks() {
-        WelcomePage welcomePage = new WelcomePage(driver);
-        welcomePage.open(welcomePage.getPageUrl());
-
-        CatalogPage catalogPage = welcomePage.enterStore();
-        catalogPage.selectMenuItem("Sign In");
-
-        SignInPage signInPage = new SignInPage(driver);
-        catalogPage = signInPage.loginAs(User.userID, User.userPass);
-
-        Assert.assertTrue(catalogPage.getMyAccountLink().isDisplayed());
-
-        catalogPage.selectMenuItem("My Account");
-        MyAccountPage myAccountPage = new MyAccountPage(driver);
-
-        Assert.assertEquals(myAccountPage.getUserID().getText(), User.userID);
-        Assert.assertEquals(myAccountPage.getUserEmail().getAttribute("value"), User.userEmail);
-    }
+//    @Test
+//    public void verifyUserSignInWorks() {
+//        WelcomePage welcomePage = new WelcomePage(driver);
+//        welcomePage.open(welcomePage.getPageUrl());
+//
+//        CatalogPage catalogPage = welcomePage.enterStore();
+//        catalogPage.selectMenuItem("Sign In");
+//
+//        SignInPage signInPage = new SignInPage(driver);
+//        catalogPage = signInPage.loginAs(User.userID, User.userPass);
+//
+//        Assert.assertTrue(catalogPage.getMyAccountLink().isDisplayed());
+//
+//        catalogPage.selectMenuItem("My Account");
+//        MyAccountPage myAccountPage = new MyAccountPage(driver);
+//
+//        Assert.assertEquals(myAccountPage.getUserID().getText(), User.userID);
+//        Assert.assertEquals(myAccountPage.getUserEmail().getAttribute("value"), User.userEmail);
+//    }
 
     @AfterClass
     public void quitDriver(){

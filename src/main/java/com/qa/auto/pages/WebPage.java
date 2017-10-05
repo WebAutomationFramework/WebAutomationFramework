@@ -12,26 +12,12 @@ import org.openqa.selenium.support.PageFactory;
  */
 public abstract class WebPage {
     protected WebDriver driver;
-    private static String PAGE_URL;
-
-    @FindBy(linkText = "Sign In")
-    protected WebElement signInBtn;
-
-    @FindBy(linkText = "My Account")
-    protected WebElement myAccountLink;
+    protected String pageUrl;
 
     WebPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    public void selectMenuItem(String item) {
-        driver.findElement(By.linkText(item)).click();
-    }
-
-    public void open(String pageUrl) {
-        driver.get(pageUrl);
-    }
-
-    public abstract String getPageUrl();
+//    public abstract String getPageUrl();
 }

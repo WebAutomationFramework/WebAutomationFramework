@@ -3,7 +3,6 @@ package com.qa.auto.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 /**
  * Created by alexey on 9/7/17.
@@ -19,11 +18,10 @@ public class SearchPage extends WebPage {
     @FindBy(xpath = "//*[@id='Catalog']/table/tbody/tr[2]/td[2]/b/a/font")
     private WebElement productIdElem;
 
-
     public SearchPage(WebDriver driver) {
         super(driver);
     }
-    public String getProuductIdStr (){
+    public String getProductIdStr(){
         return productIdElem.getText();
     }
 
@@ -32,9 +30,9 @@ public class SearchPage extends WebPage {
         searchProductsBtn.click();
     }
 
-    @Override
-    public String getPageUrl() {
-        return null;
-    }
+//    @Override
+//    public String getPageUrl() {
+//        return null;
+//    }
 
 }
