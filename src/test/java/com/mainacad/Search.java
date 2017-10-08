@@ -1,7 +1,7 @@
 package com.mainacad;
 
 
-import com.mainacad.pages.CatalogPage;
+import com.mainacad.pages.SearchResultsPage;
 import com.mainacad.pages.WelcomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -13,14 +13,14 @@ public class Search extends TestBase {
 
     @Test
     public void verifySearchWithoutWords(){
-        CatalogPage catalogPage =
+        SearchResultsPage searchResultsPage =
                 new WelcomePage(driver)
                         .open()
                         .enterStore()
                         .typeIntoSearchField(" ")
                         .clickSearchButton();
 
-         Assert.assertTrue(catalogPage.isPageDisplayed());
-         Assert.assertTrue(catalogPage.isEmptySearchErrorMessageDisplayed());
+         Assert.assertTrue(searchResultsPage.isPageDisplayed());
+         Assert.assertTrue(searchResultsPage.isEmptySearchErrorMessageDisplayed());
     }
 }

@@ -10,10 +10,7 @@ import org.openqa.selenium.support.FindBy;
  */
 public class CatalogPage extends PageWithHeaderMenu {
     private final String PAGE_URL = "http://52.210.246.113:8080/jpetstore/actions/Catalog.action";
-    private final String VALIDATION_MESSAGE_EMPTY_SEARCH = "Please enter a keyword to search for, then press the search button.";
 
-    @FindBy(xpath = "//*[@id='Content']/ul[1]/li")
-    private WebElement catalogPageEmptySearchLabel;
 
     public CatalogPage(WebDriver driver) {
         super(driver);
@@ -26,11 +23,7 @@ public class CatalogPage extends PageWithHeaderMenu {
     }
 
     @Override
-    public boolean isPageDisplayed() {
-        return UrlParser.cleanUpURL(driver.getCurrentUrl()).equals(PAGE_URL);
-    }
-
-    public boolean isEmptySearchErrorMessageDisplayed() {
-        return catalogPageEmptySearchLabel.getText().equals(VALIDATION_MESSAGE_EMPTY_SEARCH);
+    public boolean isPageDisplayed(){
+        return driver.getCurrentUrl().equals(PAGE_URL);
     }
 }

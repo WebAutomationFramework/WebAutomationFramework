@@ -28,8 +28,8 @@ public abstract class PageWithHeaderMenu extends WebPage {
         return this;
     }
 
-    public CatalogPage clickSearchButton() {
+    public SearchResultsPage clickSearchButton() {
         searchSubmitButton.click();
-        return new CatalogPage(driver);
+        return new SearchResultsPage(driver);
     }
 }
