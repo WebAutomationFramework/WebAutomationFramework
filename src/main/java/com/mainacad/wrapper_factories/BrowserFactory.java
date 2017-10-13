@@ -4,6 +4,7 @@ import com.mainacad.helpers.PropertyWorker;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 /**
  * Created by Olexiy on 9/13/2017.
@@ -22,7 +23,7 @@ public class BrowserFactory {
                 driver = new FirefoxDriver();
                 break;
             default:
-                driver = new ChromeDriver();
+                driver = new RemoteWebDriver("http://localhost:4444/wd/hub");
                 break;
         }
         return driver;
