@@ -8,11 +8,11 @@ import org.testng.annotations.Test;
 public class ShoppingCart extends TestBase{
     @Test
     public void viewShoppingCart() {
-        ShoppingCartPage catalogPage =
+        ShoppingCartPage shoppingCartPage =
                 new WelcomePage(driver).open()
                         .enterStore()
                         .clickOnShoppingCart();
 
-        Assert.assertTrue(catalogPage.isPageDisplayed());
+        Assert.assertTrue(shoppingCartPage.isPageDisplayed());
     }
 }

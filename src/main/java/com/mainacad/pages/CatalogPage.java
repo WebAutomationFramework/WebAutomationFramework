@@ -20,6 +20,6 @@ public class CatalogPage extends PageWithHeaderMenu {
 
     @Override
     public boolean isPageDisplayed() {
-        return driver.getCurrentUrl() == PAGE_URL;
+        return driver.getCurrentUrl().equals(PAGE_URL);
     }
 }
