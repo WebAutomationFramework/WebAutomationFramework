@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="LoginHeadless" verbose="2">
+    <test name="LoginHeadless">
+        <classes>
+            <class name="com.mainacad.LoginHeadless" />
+        </classes>
+    </test>
+</suite>
