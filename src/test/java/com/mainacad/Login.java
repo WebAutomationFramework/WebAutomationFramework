@@ -43,4 +43,33 @@ public class Login extends TestBase {
                 userCredentials.getUsername());
 
     }
+
+    @Test
+    public void invalidLogin() throws InterruptedException {
+
+        UserCredentials userCredentials =
+                new UserCredentials("fake_j2ee", "j2ee");
+
+
+        WelcomePage welcomePage = new WelcomePage(driver);
+        CatalogPage catalogPage = new CatalogPage(driver);
+        SignInPage signInPage = new SignInPage(driver);
+
+        welcomePage.open();
+        Assert.assertTrue(welcomePage.isPageDisplayed());
+
+        welcomePage.enterStore();
+        Assert.assertTrue(catalogPage.isPageDisplayed());
+
+        catalogPage.clickOnSighIn();
+        Assert.assertTrue(signInPage.isPageDisplayed());
+
+        signInPage.typeIntoUsernameInput(userCredentials.getUsername());
+        signInPage.typeIntoPasswordInput(userCredentials.getPassword());
+        signInPage.clickLoginButton();
+        Assert.assertTrue(signInPage.isPageDisplayed());
+        Assert.assertTrue(signInPage.isInvalidLoginMessageDisplayed());
+
+    }
+
 }

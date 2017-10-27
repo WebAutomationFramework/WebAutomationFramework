@@ -18,6 +18,10 @@ public class SignInPage extends PageWithHeaderMenu {
     @FindBy(name = "signon")
     private WebElement loginButton;
 
+    @FindBy(xpath = "//div[@id='Content']/ul/li[contains(text(), 'Signon failed.')]")
+    private WebElement invalidLoginMessage;
+
+
 
     public SignInPage(WebDriver driver) {
         super(driver);
@@ -45,6 +49,10 @@ public class SignInPage extends PageWithHeaderMenu {
 
     public void clickLoginButton() {
         loginButton.click();
+    }
+
+    public boolean isInvalidLoginMessageDisplayed() {
+        return invalidLoginMessage.isDisplayed();
     }
 
 }

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Login" verbose="2">
+    <test name="Login">
+        <classes>
+            <class name="com.mainacad.Login" />
+        </classes>
+    </test>
+</suite>
