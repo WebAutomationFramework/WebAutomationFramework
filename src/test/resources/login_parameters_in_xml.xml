@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="LoginDataProviderInClass" verbose="2">
+    <test name="LoginValid">
+        <parameter name="username" value="j2ee" />
+        <parameter name="password" value="j2ee" />
+        <parameter name="shouldBeLoggedIn" value="true" />
+        <classes>
+            <class name="com.mainacad.LoginParametersInXml" />
+        </classes>
+    </test>
+    <test name="LoginInvalid">
+        <parameter name="username" value="fake_user" />
+        <parameter name="password" value="fake_password" />
+        <parameter name="shouldBeLoggedIn" value="false" />
+        <classes>
+            <class name="com.mainacad.LoginParametersInXml" />
+        </classes>
+    </test>
+
+</suite>
