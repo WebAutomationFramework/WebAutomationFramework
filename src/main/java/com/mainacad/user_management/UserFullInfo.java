@@ -16,10 +16,10 @@ public class UserFullInfo {
     private String userCountry;
 
     public UserFullInfo(String userID, String userPass,
-                String userEmail, String userFirstName,
-                String userLastName, String userPhoneNumb,
-                String userAddress1, String userCity,
-                String userState, String userZip, String userCountry) {
+                        String userEmail, String userFirstName,
+                        String userLastName, String userPhoneNumb,
+                        String userAddress1, String userCity,
+                        String userState, String userZip, String userCountry) {
         this.userID = userID;
         this.userPass = userPass;
         this.userEmail = userEmail;
