@@ -23,7 +23,7 @@ public class BrowserFactory {
                 driver = new FirefoxDriver();
                 break;
             default:
-                driver = new RemoteWebDriver("http://localhost:4444/wd/hub");
+                driver = new ChromeDriver();
                 break;
         }
         return driver;
