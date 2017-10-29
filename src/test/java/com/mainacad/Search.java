@@ -4,6 +4,7 @@ package com.mainacad;
 import com.mainacad.pages.SearchResultsPage;
 import com.mainacad.pages.WelcomePage;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 /**
@@ -12,12 +13,13 @@ import org.testng.annotations.Test;
 public class Search extends TestBase {
 
     @Test
-    public void verifySearchWithoutWords(){
+    @Parameters({"searchQuery"})
+    public void verifySearchWithoutWords(String searchQuery){
         SearchResultsPage searchResultsPage =
                 new WelcomePage(driver)
                         .open()
                         .enterStore()
-                        .typeIntoSearchField(" ")
+                        .typeIntoSearchField(searchQuery)
                         .clickSearchButton();
 
          Assert.assertTrue(searchResultsPage.isPageDisplayed());

@@ -12,7 +12,7 @@ public class SearchResultsPage extends PageWithHeaderMenu{
     private final String PAGE_URL = "http://52.210.246.113:8080/jpetstore/actions/Catalog.action";
     private final String VALIDATION_MESSAGE_EMPTY_SEARCH = "Please enter a keyword to search for, then press the search button.";
 
-    @FindBy(xpath = "//*[@id='Content']/ul[1]/li")
+    @FindBy(css = ".messages li")
     private WebElement catalogPageEmptySearchLabel;
 
     public SearchResultsPage(WebDriver driver) {
