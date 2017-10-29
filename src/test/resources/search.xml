@@ -12,7 +12,7 @@
         </classes>
     </test>
     <test name="SearchWithoutWordsTestOnChrome">
-        <parameter name="browserName" value="chrome"/>
+        <parameter name="browserName" value="remote-chrome"/>
         <classes>
             <class name="com.mainacad.Search"/>
         </classes>

@@ -28,12 +28,12 @@ public class BrowserFactory {
         if (driver == null) {
             if (CHROME.equals(browser)) {
 
-                capabilities.chrome();
+                capabilities.setCapability(CapabilityType.BROWSER_NAME, "chrome");
                 driver = new ChromeDriver(capabilities);
 
             } else if (FIREFOX.equals(browser)) {
 
-                capabilities.firefox();
+                capabilities.setCapability(CapabilityType.BROWSER_NAME, "firefox");
                 driver = new FirefoxDriver();
 
             } else if (REMOTE_CHROME.equals(browser)) {

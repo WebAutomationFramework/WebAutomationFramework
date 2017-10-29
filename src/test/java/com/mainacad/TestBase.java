@@ -14,7 +14,7 @@ public class TestBase {
     public String ProuductIdStr = "FL-DLH-02";
 
     @BeforeMethod
-    @Parameters({ "browserName" })
+    @Parameters({"browserName"})
     public void setUp(String browserName) throws Exception {
         timeout = PropertyLoader.loadProperty("implicit-timeout");
 
@@ -29,7 +29,7 @@ public class TestBase {
     @AfterMethod
     public void quitDriver() throws InterruptedException {
         System.out.println("Closing browser");
-        if(driver!= null){
+        if (driver != null) {
             BrowserFactory.closeDriver();
         }
     }

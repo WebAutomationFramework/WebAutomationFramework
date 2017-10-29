@@ -14,4 +14,7 @@
     
 
  
+- To run tests on Docker or local selenium grid
 
+    1. Run 'docker-compose up' command from a folder where docker file exists
+    2. Run search.xml from terminal or from IDE (search.xml by default configured to run tests on firefox and chrome nodes)
