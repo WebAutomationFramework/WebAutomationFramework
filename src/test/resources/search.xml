@@ -5,9 +5,6 @@
         <parameter name="browserName" value="remote-firefox"/>
         <classes>
             <class name="com.mainacad.Search">
-                <methods>
-                    <include name="SearchWithoutWordsTest"/>
-                </methods>
             </class>
         </classes>
     </test>
