@@ -9,7 +9,7 @@
   <url>http://maven.apache.org</url>
 
   <properties>
-    <suiteXmlFile>shoppingcart.xml</suiteXmlFile>
+    <suiteXmlFile>search.xml</suiteXmlFile>
   </properties>
 
   <build>
@@ -51,6 +51,11 @@
       <groupId>org.seleniumhq.selenium.grid</groupId>
       <artifactId>selenium-grid-hub</artifactId>
       <version>1.0.5</version>
+    </dependency>
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>6.9.10</version>
     </dependency>
   </dependencies>
 </project>

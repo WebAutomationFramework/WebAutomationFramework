@@ -1,8 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<suite name="Smoke" verbose="2">
-<test name="Smoke">
-    <classes>
-        <class name="com.mainacad.Search" />
-    </classes>
-</test>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Search" verbose="2">
+    <parameter name="searchQuery" value=" "/>
+    <test name="SearchWithoutWordsTestOnFirefox">
+        <parameter name="browserName" value="remote-firefox"/>
+        <classes>
+            <class name="com.mainacad.Search">
+                <methods>
+                    <include name="SearchWithoutWordsTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="SearchWithoutWordsTestOnChrome">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="com.mainacad.Search"/>
+        </classes>
+    </test>
 </suite>
+
