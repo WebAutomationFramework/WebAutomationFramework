@@ -1,5 +1,7 @@
 package com.mainacad.pages;
 
+import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -10,6 +12,14 @@ public class CatalogPage extends PageWithHeaderMenu {
 
     public CatalogPage(WebDriver driver) {
         super(driver);
+    }
+
+    public void clickOnCategory(String nameCategoryId) {
+        driver.findElement(By.xpath("//div[@id='SidebarContent']/a[contains (@href, 'categoryId="+nameCategoryId+"')]"))
+                .click();
+
+
+        System.out.println("Product is added to the basket");
     }
 
     @Override

@@ -15,13 +15,13 @@ public class TestBase {
 
     @BeforeMethod
     public void setUp(){
-        // driver = BrowserFactory.initDriver();
-        driver = new FirefoxDriver();
+        driver = BrowserFactory.initDriver();
+        //driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-    /*@AfterMethod
+    //@AfterMethod
     public void quitDriver(){
         BrowserFactory.closeDriver();
-    }*/
+    }
 }
