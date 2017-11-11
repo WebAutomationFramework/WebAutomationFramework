@@ -4,6 +4,7 @@ import com.mainacad.helpers.PropertyWorker;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 /**
  * Created by Olexiy on 9/13/2017.

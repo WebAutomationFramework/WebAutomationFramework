@@ -7,7 +7,7 @@
 target/
 qaauto.iml
 .DS_STORE
-
+allure-results
 
 # Log file
 *.log
